@@ -1,3 +1,8 @@
 ffmpeg -i eye0.mp4 -vf fps=2 /mnt/c/Users/mstoll3/Desktop/irisrecognition/users/user1/%02d.jpg
 
 arg     type source ?  you know  target location
+
+also, activation:
+
+go to ubuntu
+source iris2/bin/activate
