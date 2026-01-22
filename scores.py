@@ -6,11 +6,7 @@ import numpy as np
 iris_pipeline = iris.IRISPipeline()
 matcher = iris.HammingDistanceMatcher()
 
-for each in os.listdir("/home/arrangedcupid0/irisrecognition/imposters"):
-	if len(each) == 9:
-		user = each[:5]
-	if len(each) == 10:
-		user = each[:6]
+for user in os.listdir("/home/arrangedcupid0/irisrecognition/users"):
 	print(f"user: {user}")
 	sample = cv2.imread(f"/home/arrangedcupid0/irisrecognition/imposters/{each}", cv2.IMREAD_GRAYSCALE)
 	output = iris_pipeline(iris.IRImage(img_data=sample, image_id="test", eye_side="right"))
