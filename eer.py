@@ -5,7 +5,7 @@ import numpy as np
 from pathlib import Path
 import matplotlib.pyplot as plt
 
-values = 30
+values = 150
 lower = .31
 step = .16 / values
 
@@ -48,11 +48,13 @@ for user in os.listdir("/home/arrangedcupid0/irisrecognition/users"):
 			frr = (frrCount/len(genArr)) * 100
 			frrArr.append(frr)
 			FRR.write(str(frr) + "%\n")
-	closest = 1
+	closest = 100 #remember: percentage
 	closeInd = 0
 	for i in range(values):
 		dist = abs(farArr[i] - frrArr[i])
+#		print(str(dist))
 		if dist < closest:
+#			print("it was smaller. updating")
 			closeInd = i
 			closest = dist
-	print("At threshold " + str((step * closeInd) + lower) + ", FAR: " + str(farArr[closeInd]) + " and FRR: " + str(frrArr[closeInd]))
+	print("At threshold " + str(round((step * closeInd) + lower, 4)) + ", FAR: " + str(round(farArr[closeInd], 2)) + " and FRR: " + str(round(frrArr[closeInd], 2)) + " with a difference of " + str(round(closest, 2)))
