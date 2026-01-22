@@ -1,0 +1,58 @@
+user: user6
+Failed imposter code count: 5
+Failed genuine code count: 0
+user: user17
+Failed imposter code count: 5
+Failed genuine code count: 4
+user: user9
+Bad read.
+user: user1
+Failed imposter code count: 5
+Failed genuine code count: 8
+user: user8
+Failed imposter code count: 5
+Failed genuine code count: 1
+user: user7
+Bad read.
+user: user13
+Failed imposter code count: 5
+Failed genuine code count: 14
+user: user16
+Failed imposter code count: 5
+Failed genuine code count: 2
+user: user15
+Bad read.
+user: user11
+Failed imposter code count: 5
+Failed genuine code count: 0
+user: user12
+Bad read.
+user: user2
+Failed imposter code count: 5
+Failed genuine code count: 4
+user: user5
+Failed imposter code count: 5
+Failed genuine code count: 14
+user: user4
+Failed imposter code count: 5
+Failed genuine code count: 5
+user: user21
+Failed imposter code count: 5
+Failed genuine code count: 5
+user: user18
+Failed imposter code count: 5
+Failed genuine code count: 3
+user: user14
+Failed imposter code count: 5
+Failed genuine code count: 3
+user: user3
+Failed imposter code count: 5
+Failed genuine code count: 1
+user: user10
+Bad read.
+user: user19
+Failed imposter code count: 5
+Failed genuine code count: 4
+user: user20
+Failed imposter code count: 5
+Failed genuine code count: 3

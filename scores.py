@@ -32,6 +32,8 @@ for each in os.listdir("/home/arrangedcupid0/irisrecognition/imposters"):
 	genArr = []
 	gFailCount = 0
 	for other in os.listdir(f"/home/arrangedcupid0/irisrecognition/users/{user}"):
+		if other == "impArr.txt" or other == "genArr.txt":
+			continue
 		gen = cv2.imread(f"/home/arrangedcupid0/irisrecognition/users/{user}/{other}", cv2.IMREAD_GRAYSCALE)
 		output = iris_pipeline(iris.IRImage(img_data=gen, image_id="test", eye_side="right"))
 		genOut = output['iris_template']
