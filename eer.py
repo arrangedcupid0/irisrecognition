@@ -9,21 +9,21 @@ values = 150
 lower = .31
 step = .16 / values
 
-for user in os.listdir("/home/arrangedcupid0/irisrecognition/users"):
+for user in os.listdir("/mnt/c/Users/mstoll3/Desktop/users"):
 	print(user)
-	if Path(f"/home/arrangedcupid0/irisrecognition/users/{user}/impArr.txt").exists():
-		impArr = np.loadtxt(f"/home/arrangedcupid0/irisrecognition/users/{user}/impArr.txt", delimiter=",")
+	if Path(f"/mnt/c/Users/mstoll3/Desktop/users/{user}/impArr.txt").exists():
+		impArr = np.loadtxt(f"/mnt/c/Users/mstoll3/Desktop/users/{user}/impArr.txt", delimiter=",")
 	else:
 		print("no impArr")
 		continue
-	if Path(f"/home/arrangedcupid0/irisrecognition/users/{user}/genArr.txt").exists():
-		genArr = np.loadtxt(f"/home/arrangedcupid0/irisrecognition/users/{user}/genArr.txt", delimiter=",")
+	if Path(f"/mnt/c/Users/mstoll3/Desktop/users/{user}/genArr.txt").exists():
+		genArr = np.loadtxt(f"/mnt/c/Users/mstoll3/Desktop/users/{user}/genArr.txt", delimiter=",")
 	else:
 		print("no genArr")
 		continue
 
 	farArr = []
-	with open(f"/home/arrangedcupid0/irisrecognition/users/{user}/FAR.txt", 'w', encoding="utf-8") as FAR:
+	with open(f"/mnt/c/Users/mstoll3/Desktop/users/{user}/FAR.txt", 'w', encoding="utf-8") as FAR:
 		FAR.write("FAR at threshold:\n")
 		for i in range(values):
 			threshold = (step * i) + lower
@@ -36,7 +36,7 @@ for user in os.listdir("/home/arrangedcupid0/irisrecognition/users"):
 			farArr.append(far)
 			FAR.write(str(far) + "%\n")
 	frrArr = []
-	with open(f"/home/arrangedcupid0/irisrecognition/users/{user}/FRR.txt", 'w', encoding="utf-8") as FRR:
+	with open(f"/mnt/c/Users/mstoll3/Desktop/users/{user}/FRR.txt", 'w', encoding="utf-8") as FRR:
 		FRR.write("FRR at threshold:\n")
 		for i in range(values):
 			threshold = (step * i) + lower
