@@ -5,7 +5,7 @@ import numpy as np
 from pathlib import Path
 import matplotlib.pyplot as plt
 
-values = 150
+values = 100
 lower = .31
 step = .16 / values
 

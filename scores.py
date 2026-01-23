@@ -2,29 +2,32 @@ import cv2
 import iris
 import os
 import numpy as np
+import random
 
 iris_pipeline = iris.IRISPipeline()
 matcher = iris.HammingDistanceMatcher()
+random.seed()
 
-for user in os.listdir("/mnt/c/Users/mstoll3/Desktop/users/"):
+for user in os.listdir("/mnt/c/Users/mstoll3/Desktop/imposters/"):
 	print(f"user: {user}")
-	sample = cv2.imread(f"/mnt/c/Users/mstoll3/Desktop/imposters/{user}.jpg", cv2.IMREAD_GRAYSCALE)
-	output = iris_pipeline(iris.IRImage(img_data=sample, image_id="test", eye_side="right"))
-	sampOut = output['iris_template']
-	if sampOut is None:
-		print("Bad read.")
-		continue
+	sampOut = None
+	while sampOut is None:
+		test = random.choice(os.listdir(f"/mnt/c/Users/mstoll3/Desktop/imposters/{user}"))
+		sample = cv2.imread(f"/mnt/c/Users/mstoll3/Desktop/imposters/{user}/{test}", cv2.IMREAD_GRAYSCALE)
+		output = iris_pipeline(iris.IRImage(img_data=sample, image_id="test", eye_side="right"))
+		sampOut = output['iris_template']
 	impArr = []
 	iFailCount = 0
 	for other in os.listdir("/mnt/c/Users/mstoll3/Desktop/imposters"):
 		if other is not user:
-			imp = cv2.imread(f"/mnt/c/Users/mstoll3/Desktop/imposters/{other}", cv2.IMREAD_GRAYSCALE)
-			output = iris_pipeline(iris.IRImage(img_data=imp, image_id="test", eye_side="right"))
-			impOut = output['iris_template']
-			if impOut is None:
-				iFailCount += 1
-				continue
-			impArr.append(matcher.run(sampOut, impOut))
+			for image in os.listdir(f"/mnt/c/Users/mstoll3/Desktop/imposters/{other}"):
+				imp = cv2.imread(f"/mnt/c/Users/mstoll3/Desktop/imposters/{other}/{image}", cv2.IMREAD_GRAYSCALE)
+				output = iris_pipeline(iris.IRImage(img_data=imp, image_id="test", eye_side="right"))
+				impOut = output['iris_template']
+				if impOut is None:
+					iFailCount += 1
+					continue
+				impArr.append(matcher.run(sampOut, impOut))
 	genArr = []
 	gFailCount = 0
 	for other in os.listdir(f"/mnt/c/Users/mstoll3/Desktop/users/{user}"):
