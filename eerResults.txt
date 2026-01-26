@@ -1,0 +1,42 @@
+P027
+At threshold 0.4092, FAR: 53.09 and FRR: 52.76 with a difference of 0.34
+P028
+At threshold 0.3708, FAR: 34.2 and FRR: 32.79 with a difference of 1.42
+P031
+At threshold 0.39, FAR: 36.16 and FRR: 35.65 with a difference of 0.5
+P032
+At threshold 0.4028, FAR: 37.79 and FRR: 38.61 with a difference of 0.83
+P033
+At threshold 0.3836, FAR: 15.64 and FRR: 15.98 with a difference of 0.35
+P035
+At threshold 0.3804, FAR: 26.06 and FRR: 27.53 with a difference of 1.47
+P036
+At threshold 0.398, FAR: 35.5 and FRR: 33.64 with a difference of 1.87
+P037
+At threshold 0.3996, FAR: 36.81 and FRR: 36.78 with a difference of 0.02
+P038
+At threshold 0.3804, FAR: 33.55 and FRR: 35.62 with a difference of 2.07
+P039
+At threshold 0.3868, FAR: 24.1 and FRR: 23.72 with a difference of 0.39
+P040
+At threshold 0.4028, FAR: 36.81 and FRR: 39.66 with a difference of 2.86
+P041
+At threshold 0.406, FAR: 14.98 and FRR: 15.52 with a difference of 0.54
+P042
+At threshold 0.3964, FAR: 26.06 and FRR: 24.2 with a difference of 1.85
+P043
+At threshold 0.3852, FAR: 35.18 and FRR: 37.43 with a difference of 2.25
+P044
+At threshold 0.4252, FAR: 46.25 and FRR: 49.78 with a difference of 3.53
+P045
+At threshold 0.3868, FAR: 34.2 and FRR: 35.43 with a difference of 1.23
+P046
+At threshold 0.4012, FAR: 45.28 and FRR: 45.72 with a difference of 0.45
+P047
+At threshold 0.3996, FAR: 14.01 and FRR: 13.74 with a difference of 0.27
+P048
+At threshold 0.3932, FAR: 29.64 and FRR: 31.01 with a difference of 1.37
+P049
+At threshold 0.4092, FAR: 28.01 and FRR: 28.91 with a difference of 0.9
+P050
+At threshold 0.3788, FAR: 38.44 and FRR: 35.49 with a difference of 2.95
